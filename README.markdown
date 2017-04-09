@@ -19,5 +19,5 @@ bundle exec rake spec
 To run the MiniTest tests:
 
 ```
-bundle exec rake test
+bundle exec rake tes
 ```
