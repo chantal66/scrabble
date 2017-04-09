@@ -1,8 +1,7 @@
+require 'pry'
 class Scrabble
 
-  def score(word)
-    1
-  end
+  # attr_accessor :score
 
   def point_values
     {
@@ -15,4 +14,21 @@ class Scrabble
       "Y"=>4, "Z"=>10
     }
   end
+
+
+  def score(word)
+    scores = []
+    if word.nil? || word == ''
+      scores << 0
+    elsif 
+      letters = word.upcase.split('')
+      letters.each do |letter|
+        scores << point_values[letter]
+      end
+    end
+    scores.reduce(:+)
+  end
 end
+
+
+
